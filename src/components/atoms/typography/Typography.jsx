@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import MuiTypography from '@mui/material/Typography';
 import Skeleton from '@mui/material/Skeleton';
-import { alignments } from '../../helpers/enums';
+import { alignments } from '@helpers/enums';
 
 export const variants = [
     'body1',

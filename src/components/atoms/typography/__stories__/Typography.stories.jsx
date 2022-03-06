@@ -1,6 +1,6 @@
 import React from 'react';
 import { Typography, variants } from '../';
-import { alignments } from '../../../helpers/enums';
+import { alignments } from '@helpers/enums';
 
 export default {
     title: 'Atoms/Typography',

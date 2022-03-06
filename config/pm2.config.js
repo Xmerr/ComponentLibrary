@@ -5,7 +5,7 @@ module.exports = {
         {
             name: 'library',
             args: 'run storybook',
-            cwd: path.join(__dirname, '.'),
+            cwd: path.join(__dirname, '..'),
             namespace: 'cl',
             script: 'yarn',
         },

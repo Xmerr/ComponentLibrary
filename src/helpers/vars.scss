@@ -2,9 +2,11 @@
     --primary-color: purple;
     --secondary-color: blue;
     --shadow-color: black;
+    --neutral-color: gray;
 }
 
 $primaryColor: var(--primary-color);
 $secondaryColor: var(--secondary-color);
 $shadowColor: var(--shadow-color);
+$neutralColor: var(--neutral-color);
 $navbarHeight: 50px;

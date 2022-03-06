@@ -2,6 +2,7 @@ import babel from 'rollup-plugin-babel';
 import external from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
 import resolve from '@rollup/plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
 
 export default [
     {
@@ -31,6 +32,9 @@ export default [
             external(),
             resolve({
                 extensions: ['.mjs', '.js', '.json', '.jsx'],
+            }),
+            commonjs({
+                include: 'node_modules/**',
             }),
         ],
     },

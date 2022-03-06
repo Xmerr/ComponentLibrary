@@ -25,16 +25,23 @@ export const Themer = ({ children }) => {
                         primary: '#fff',
                     },
                 },
+                typography: {
+                    subtitle2: {
+                        fontSize: '0.5rem',
+                    },
+                },
             }),
         [prefersDarkMode]
     );
 
     // Responsive Settings
     theme = responsiveFontSizes(theme);
+    console.log(theme);
 
     // Settings css variables
     document.documentElement.style.setProperty('--primary-color', theme.palette.primary[400]);
     document.documentElement.style.setProperty('--secondary-color', theme.palette.secondary[800]);
+    document.documentElement.style.setProperty('--neutral-color', theme.palette.grey[600]);
 
     return (
         <ThemeProvider theme={theme}>

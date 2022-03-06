@@ -1,2 +1,1 @@
-export * from './atoms';
-export * from './misc';
+export * from './components';
