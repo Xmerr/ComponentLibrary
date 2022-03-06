@@ -3,15 +3,18 @@ import external from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
+import alias from '@rollup/plugin-alias';
+const aliases = require('./config/aliases');
+
+const aliasList = Object.keys(aliases).map(find => ({
+    find,
+    replacement: aliases[find],
+}));
 
 export default [
     {
         input: 'src/index.js',
         output: [
-            {
-                file: 'dist/index.js',
-                format: 'cjs',
-            },
             {
                 file: 'dist/index.es.js',
                 format: 'es',
@@ -19,22 +22,25 @@ export default [
             },
         ],
         plugins: [
+            alias({
+                entries: aliasList,
+            }),
+            babel({
+                exclude: 'node_modules/**',
+                presets: ['@babel/preset-react'],
+            }),
+            commonjs({
+                include: 'node_modules/**',
+            }),
+            external(),
             postcss({
                 minimize: true,
                 modules: true,
                 plugins: [],
                 use: ['sass'],
             }),
-            babel({
-                exclude: 'node_modules/**',
-                presets: ['@babel/preset-react'],
-            }),
-            external(),
             resolve({
                 extensions: ['.mjs', '.js', '.json', '.jsx'],
-            }),
-            commonjs({
-                include: 'node_modules/**',
             }),
         ],
     },
