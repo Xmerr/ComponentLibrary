@@ -41,6 +41,7 @@ export default [
             }),
             resolve({
                 extensions: ['.mjs', '.js', '.json', '.jsx'],
+                mainFields: ['browser', 'module', 'main', 'jsnext:main'],
             }),
         ],
     },

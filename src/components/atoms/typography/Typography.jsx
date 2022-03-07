@@ -79,8 +79,10 @@ Typography.propTypes = {
     bold: PropTypes.bool,
     children: PropTypes.oneOfType([
         PropTypes.arrayOf(PropTypes.string),
+        PropTypes.node,
         PropTypes.number,
         PropTypes.string,
+        PropTypes.any,
     ]).isRequired,
     loading: PropTypes.bool,
     paragraph: PropTypes.bool,
