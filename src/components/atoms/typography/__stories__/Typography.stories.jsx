@@ -1,10 +1,10 @@
 import React from 'react';
-import { Typography, variants } from '../';
+import { Typography as TypographyComp, variants } from '../';
 import { alignments } from '@helpers/enums';
 
 export default {
-    title: 'Atoms/Typography',
-    component: Typography,
+    title: 'Atoms',
+    component: TypographyComp,
     args: {
         align: 'inherit',
         children: 'Example Text',
@@ -42,6 +42,6 @@ export default {
     },
 };
 
-const Template = args => <Typography {...args} />;
+const Template = args => <TypographyComp {...args} />;
 
-export const Default = Template.bind({});
+export const Typography = Template.bind({});

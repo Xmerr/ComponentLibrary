@@ -1,10 +1,10 @@
 import React from 'react';
-import { Button, variants } from '../';
+import { Button as ButtonComp, variants } from '../';
 import { colors, sizes } from '@helpers/enums';
 
 export default {
-    title: 'Atoms/Button',
-    component: Button,
+    title: 'Atoms',
+    component: ButtonComp,
     args: {
         children: 'Button',
         color: 'primary',
@@ -42,6 +42,6 @@ export default {
     },
 };
 
-const Template = args => <Button {...args} />;
+const Template = args => <ButtonComp {...args} />;
 
-export const Default = Template.bind({});
+export const Button = Template.bind({});

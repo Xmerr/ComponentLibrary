@@ -1,13 +1,14 @@
 {
     "name": "@xmer/component-library",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "main": "dist/index.es.js",
     "repository": "git@github.com:Xmerr/componentLibrary.git",
     "license": "MIT",
     "scripts": {
         "build-lib": "rollup -c",
         "storybook": "start-storybook -p 6543",
-        "build-storybook": "build-storybook"
+        "build-storybook": "build-storybook",
+        "test": "jest"
     },
     "peerDependencies": {
         "@emotion/react": "^11.8.1",
@@ -30,18 +31,35 @@
         "@storybook/addon-postcss": "^2.0.0",
         "@storybook/preset-scss": "^1.0.3",
         "@storybook/react": "^6.4.14",
+        "@wojtekmaj/enzyme-adapter-react-17": "^0.6.6",
+        "babel-jest": "^27.5.1",
         "babel-loader": "^8.2.3",
+        "enzyme": "^3.11.0",
+        "jest": "^27.5.1",
         "node-sass": "^7.0.1",
-        "postcss-flexbugs-fixes": "^5.0.2",
         "postcss": "^8.4.7",
-        "react-dom": "^17.0.2",
+        "postcss-flexbugs-fixes": "^5.0.2",
         "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "rollup": "^2.68.0",
         "rollup-plugin-babel": "^4.4.0",
         "rollup-plugin-commonjs": "^10.1.0",
         "rollup-plugin-peer-deps-external": "^2.2.4",
         "rollup-plugin-postcss": "^4.0.2",
-        "rollup": "^2.68.0",
-        "sass-loader": "^10.0.0",
-        "sass": "^1.49.0"
+        "sass": "^1.49.0",
+        "sass-loader": "^10.0.0"
+    },
+    "jest": {
+        "verbose": true,
+        "clearMocks": true,
+        "collectCoverage": true,
+        "transform": {
+            "^.+\\.(js|jsx)$": "babel-jest"
+        },
+        "moduleNameMapper": {
+            "^@helpers(.*)$": "<rootDir>/src/helpers$1",
+            "^@atoms(.*)$": "<rootDir>/src/components/atoms$1",
+            "^@molecules(.*)$": "<rootDir>/src/components/molecules$1"
+        }
     }
 }

@@ -36,7 +36,6 @@ export const Themer = ({ children }) => {
 
     // Responsive Settings
     theme = responsiveFontSizes(theme);
-    console.log(theme);
 
     // Settings css variables
     document.documentElement.style.setProperty('--primary-color', theme.palette.primary[400]);
