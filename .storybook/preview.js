@@ -1,5 +1,4 @@
-import React from 'react';
-import { Themer } from '../src/helpers/Themer';
+import decos from './decorators';
 
 export const parameters = {
     actions: { argTypesRegex: '^on[A-Z].*' },
@@ -11,10 +10,4 @@ export const parameters = {
     },
 };
 
-export const decorators = [
-    Story => (
-        <Themer>
-            <Story />
-        </Themer>
-    ),
-];
+export const decorators = decos;

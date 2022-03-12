@@ -1,15 +1,17 @@
 import React from 'react';
+import EditIcon from '@mui/icons-material/Edit';
 import { Button as ButtonComp, variants } from '../';
 import { colors, sizes } from '@helpers/enums';
 
 export default {
-    title: 'Atoms',
+    title: 'Atoms/Button',
     component: ButtonComp,
     args: {
         children: 'Button',
         color: 'primary',
         size: 'medium',
         variant: 'contained',
+        type: 'button',
     },
     argTypes: {
         children: {
@@ -28,6 +30,9 @@ export default {
             description: 'Size of the button',
             options: sizes,
         },
+        type: {
+            description: 'Button type, used if the button is inside a form',
+        },
         variant: {
             description: 'Type of button',
             options: variants,
@@ -45,3 +50,8 @@ export default {
 const Template = args => <ButtonComp {...args} />;
 
 export const Button = Template.bind({});
+
+export const IconButton = Template.bind({});
+IconButton.args = {
+    icon: <EditIcon />,
+};

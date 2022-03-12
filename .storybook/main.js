@@ -20,6 +20,9 @@ module.exports = {
             },
         },
     ],
+    features: {
+        emotionAlias: false,
+    },
     framework: '@storybook/react',
     webpackFinal: config => {
         return {

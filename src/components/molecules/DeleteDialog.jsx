@@ -17,7 +17,14 @@ export const DeleteDialog = props => {
     ];
 
     return (
-        <Dialog buttons={buttons} fullScreen={fullScreen} open={open} text={text} title={title} />
+        <Dialog
+            buttons={buttons}
+            fullScreen={fullScreen}
+            onClose={onCancel}
+            open={open}
+            text={text}
+            title={title}
+        />
     );
 };
 

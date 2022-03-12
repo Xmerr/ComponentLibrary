@@ -6,13 +6,21 @@ export default {
     component: DialogComp,
     args: {
         title: 'Dialog Title',
+        subtitle: 'subtitle',
         text: 'Dialog Text',
         open: false,
+        fullWidth: true,
         fullScreen: false,
     },
     argTypes: {
         title: {
             description: "What's on top of the dialog",
+            control: {
+                type: 'text',
+            },
+        },
+        subtitle: {
+            description: "What's under the title",
             control: {
                 type: 'text',
             },
@@ -25,6 +33,9 @@ export default {
         },
         open: {
             description: 'If the dialog is open or not',
+        },
+        fullWidth: {
+            description: 'If the modal should get as large as possible (not fullScreen)',
         },
         fullScreen: {
             description: 'If the modal should take up the entire screen or not',
