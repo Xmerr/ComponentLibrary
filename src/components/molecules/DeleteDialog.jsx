@@ -8,10 +8,10 @@ export const DeleteDialog = props => {
     const title = 'Are you sure?';
     const text = `Once deleted, this cannot be undone.`;
     const buttons = [
-        <Button color='warning' onClick={onCancel}>
+        <Button color='warning' onClick={onCancel} key='cancel'>
             Cancel
         </Button>,
-        <Button color='error' onClick={onConfirm}>
+        <Button color='error' onClick={onConfirm} key='confirm'>
             Confirm
         </Button>,
     ];
