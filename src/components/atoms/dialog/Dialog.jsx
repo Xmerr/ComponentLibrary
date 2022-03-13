@@ -90,13 +90,13 @@ Dialog.propTypes = {
     onClose: PropTypes.func.isRequired,
     onSubmit: PropTypes.func,
     open: PropTypes.bool.isRequired,
-    subtitle: PropTypes.string,
+    subtitle: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
     text: PropTypes.oneOfType([
         PropTypes.arrayOf(PropTypes.oneOf([PropTypes.node, PropTypes.string])),
         PropTypes.node,
         PropTypes.string,
     ]),
-    title: PropTypes.string,
+    title: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
 };
 
 Dialog.defaultProps = {

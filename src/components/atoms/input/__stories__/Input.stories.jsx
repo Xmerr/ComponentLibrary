@@ -11,6 +11,7 @@ export default {
         color: 'primary',
         size: 'medium',
         placeholder: 'Placeholder',
+        helperText: undefined,
         multiline: false,
         disabled: false,
         error: false,

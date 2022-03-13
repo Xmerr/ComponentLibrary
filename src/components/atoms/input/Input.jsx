@@ -12,6 +12,7 @@ export const Input = React.forwardRef((props, ref) => {
         disabled,
         error,
         fullWidth,
+        helperText,
         label,
         multiline,
         name,
@@ -31,6 +32,7 @@ export const Input = React.forwardRef((props, ref) => {
             disabled={disabled}
             error={error}
             fullWidth={fullWidth}
+            helperText={helperText}
             label={label}
             multiline={multiline}
             name={name}
@@ -51,6 +53,7 @@ Input.propTypes = {
     defaultValue: PropTypes.any,
     disabled: PropTypes.bool,
     error: PropTypes.bool,
+    helperText: PropTypes.string,
     fullWidth: PropTypes.bool,
     label: PropTypes.string,
     multiline: PropTypes.bool,
