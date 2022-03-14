@@ -1,0 +1,22 @@
+@mixin basic {
+    align-items: center;
+    display: flex;
+    justify-items: center;
+
+    & > *:not(:first-child) {
+        margin-left: 16px;
+    }
+}
+
+.appBar {
+    @include basic;
+    justify-content: space-between;
+}
+
+.left {
+    @include basic;
+}
+
+.right {
+    @include basic;
+}
