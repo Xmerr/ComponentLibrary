@@ -7,10 +7,11 @@ import { colors, sizes } from '@helpers/enums';
 export const variants = ['contained', 'outlined', 'text'];
 
 export const Button = props => {
-    const { children, color, icon, onClick, size, type, variant } = props;
+    const { children, color, disabled, icon, onClick, size, type, variant } = props;
 
     const buttonProps = {
         color,
+        disabled,
         onClick,
         size,
         type,
@@ -26,6 +27,7 @@ export const Button = props => {
 Button.propTypes = {
     children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
     color: PropTypes.oneOf(colors),
+    disabled: PropTypes.bool,
     icon: PropTypes.node,
     onClick: PropTypes.func,
     size: PropTypes.oneOf(sizes),

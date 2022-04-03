@@ -20,6 +20,7 @@ export default {
         value: undefined,
         required: false,
         name: 'Example Input',
+        type: 'text',
     },
     argTypes: {
         color: {
@@ -36,6 +37,9 @@ export default {
         },
         placeholder: {
             desciption: 'Text to display when the input is empty',
+        },
+        type: {
+            description: 'Type of input',
         },
         defaultValue: {
             description: 'Value the input should have without any user input',

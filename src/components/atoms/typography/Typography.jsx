@@ -59,6 +59,10 @@ export const Typography = props => {
             sx.fontWeight = 'bold';
         }
 
+        if (align === 'center') {
+            sx.width = '100%';
+        }
+
         return sx;
     };
 

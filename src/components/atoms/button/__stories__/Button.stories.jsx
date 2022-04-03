@@ -11,6 +11,7 @@ export default {
         color: 'primary',
         size: 'medium',
         variant: 'contained',
+        disabled: false,
         type: 'button',
     },
     argTypes: {

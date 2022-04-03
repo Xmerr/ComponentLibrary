@@ -1,6 +1,6 @@
 {
     "name": "@xmer/component-library",
-    "version": "1.0.8",
+    "version": "1.0.10",
     "main": "dist/index.es.js",
     "repository": "git@github.com:Xmerr/componentLibrary.git",
     "license": "MIT",
